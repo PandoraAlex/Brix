@@ -1,0 +1,26 @@
+morphling id 
+    `mid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'the morphling global unique identifier.',
+
+ morphling assets
+    `stored_morph` float NOT NULL DEFAULT '0' COMMENT 'this is the amount of morph bound to the morphling',
+
+morphling home 
+    `account` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'The account ID in which this character resides (See account.id) in the realm db.',
+    
+morphling genes 
+    `genetics` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'the genes of the morphling',
+
+morphling universe
+    `universe` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'the universe ID the morphling is in.',
+      
+morphling equipment 
+    `equipmentCache` longtext COMMENT 'this is a list of all equipment that is currently equipped.',
+      
+morphling location
+    `trans_x` float NOT NULL DEFAULT '0' COMMENT 'the X coordinate of the morphling.',
+    `trans_y` float NOT NULL DEFAULT '0' COMMENT 'the Y coordinate of the morphling.',
+    `trans_z` float NOT NULL DEFAULT '0' COMMENT 'the Z coordinate of the morphling.',
+    `trans_o` float NOT NULL DEFAULT '0' COMMENT 'the orientation of the morphling.',
+      
+      
+

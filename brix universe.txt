@@ -1,0 +1,25 @@
+brix universe
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'universe ID.',
+  `icon` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'universe icon.',
+  `flags` mediumint(8) unsigned NOT NULL DEFAULT '0', COMMENT 'flags',
+  `data` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'universe data',
+  `brix` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'brix id',
+
+
+brix server
+  `ids` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'server ID.',
+  `name` VARCHAR(32) NOT NULL DEFAULT '' COMMENT 'the name of the server',
+  `address` VARCHAR(32) NOT NULL DEFAULT '127.0.0.1' COMMENT 'the public IP address of the server.',
+  `localaddress` VARCHAR(255) NOT NULL DEFAULT '127.0.0.1' COMMENT 'the local IP address of the server.',
+  `port` INT(11) NOT NULL DEFAULT 8085 COMMENT 'the port that the server is running on.',
+
+brix subserver 
+  `ids` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'the server ID.',
+  `idss` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'the subserver ID.',
+  `name` VARCHAR(32) NOT NULL DEFAULT '' COMMENT 'the name of the realm.',
+  `name` VARCHAR(32) NOT NULL DEFAULT '' COMMENT 'the name of the subserver.',
+
+brix coordinates
+  `brix` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'brix id',
+  `x` float NOT NULL DEFAULT '0' COMMENT 'x coordinate.',
+  `y` float NOT NULL DEFAULT '0' COMMENT 'y coordinate.',
